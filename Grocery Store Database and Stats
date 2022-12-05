@@ -1,0 +1,27 @@
+--Create a store database 
+
+CREATE TABLE Foodie (id INTEGER PRIMARY KEY, Name TEXT, Aisle INTEGER, Price INTEGER, Quantity INTEGER);
+
+INSERT INTO Foodie VALUES (1, "Bananas", 1, .99, 300);
+INSERT INTO Foodie VALUES (2, "Apples", 1, .80, 600);
+INSERT INTO Foodie VALUES (3, "Oranges", 1, .89, 506);
+INSERT INTO Foodie VALUES (4, "Spinanch", 1, 2.99, 333);
+INSERT INTO Foodie VALUES (5, "Grapes", 1, 4.99,400);
+INSERT INTO Foodie VALUES (6, "Peaches", 1, 2.00, 500);
+INSERT INTO Foodie VALUES (7, "Bagels",3, 5.99, 200);
+INSERT INTO Foodie VALUES (8, "Cereal", 4, 3.99,1500);
+INSERT INTO Foodie VALUES (9, "Oatmeal", 4, 3.99, 350);
+INSERT INTO Foodie VALUES (10, "Rice", 6, 2.75,500);
+INSERT INTO Foodie VALUES (11, "Water", 10,4.55, 505);
+INSERT INTO Foodie VALUES (12, "Cheese", 13,3.45, 789);
+INSERT INTO Foodie VALUES (13, "Shrimp", 11, 6.50, 345);
+INSERT INTO Foodie VALUES (14, "Bread", 3, 4.99, 490);
+INSERT INTO Foodie VALUES (15, "Lunch Meat", 8, 5.65, 322);
+
+--Display the database ordered by price
+
+SELECT (price) FROM Foodie ORDER BY price asc;
+
+--Display the database in sum of quantity
+
+SELECT SUM(Quantity) FROM Foodie;
