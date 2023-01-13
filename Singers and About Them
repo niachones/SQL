@@ -1,0 +1,26 @@
+/* Create table about the people and what they do here */
+CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);
+INSERT INTO singers (name) VALUES ("Beyonce");
+INSERT INTO singers (name) VALUES ("Rihanna");
+INSERT INTO singers (name) VALUES ("Tems");
+INSERT INTO singers (name) VALUES ("Lady GaGa");
+INSERT INTO singers (name) VALUES ("Sza");
+
+CREATE TABLE aboutthem ( id INTEGER PRIMARY KEY AUTOINCREMENT, city TEXT, genre TEXT);
+INSERT INTO aboutthem (city, genre) VALUES ("Houston", "R&B");
+INSERT INTO aboutthem (city, genre) VALUES ("Barbados", "Pop");
+INSERT INTO aboutthem (city, genre) VALUES ("Lagos", "Afro") ;
+INSERT INTO aboutthem (city, genre) VALUES ("LA", "Pop");
+INSERT INTO aboutthem (city, genre) VALUES ("Compton", "R&B");
+
+SELECT singers.name, aboutthem. genre
+FROM singers
+JOIN aboutthem
+ON singers.id = aboutthem.id;
+
+SELECT singers.name, c. city, g.genre
+FROM singers
+JOIN aboutthem g
+ON g.id = singers.id
+JOIN aboutthem c 
+ON c.id = singers.id
